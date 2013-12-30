@@ -4,7 +4,7 @@ The early beginings of a uRequire-based, reusable & configurable template build 
 
 ## NOT IMPLEMENTED - version 0.0.0 (just the idea)
 
-It generalizes what [urequire](http://urequire.org) does to [uBerscore](https://github.com/anodynos/uBerscore/blob/master/Gruntfile.coffee) or [backbone-orm](https://github.com/vidigami/backbone-orm/pull/8#issuecomment-31297449), as a generic-pick-and-override-what-you-like-ready-for-multiple-builds-config-with-standard-commands.
+It generalizes what [uRequire](http://urequire.org) does to [uBerscore](https://github.com/anodynos/uBerscore/blob/master/Gruntfile.coffee) or [backbone-orm](https://github.com/vidigami/backbone-orm/pull/8#issuecomment-31297449), as a generic-pick-and-override-what-you-like-ready-for-multiple-builds-config-with-standard-commands.
 
 With a minimum 5-10 line configuration, you can have an out-of-the-box, ready-to-work grunt & urequire based build system that:
 
@@ -36,28 +36,26 @@ $ grunt watch:dev_test_phantom      # watches & runs the mocha (phantomjs) tests
 $ grunt watch:dev_test_node         # watches & runs the nodejs tests
 
 ```
-###
-
-# devDependencies: { grunt: '0.4.1', urequire: '>=0.6.10' }
-
-# The `'urequire:XXX'` tasks in summary do some or all of those
-#  * derive (inherit) from 'someTask' (and/or '_defaults')
-#  * have a `path` as a source
-#  * filter `filez` within the `path`
-#  * save everything at `dstPath`
-#  * converts all modules to UMD/AMD or `#{@projectName}-min.js`
-#  * copies all other (non-module) files at `dstPath`
-#  * export a global `window._B` with a `noConflict()`
-#  * uglifies combined file with some `uglify2` settings
-#  * injects deps in modules
-#  * injects strings inside code bodies
-#  * add banners etc
-#  * manipulate modules:
-#     * remove some matched code 'skeletons'
-#     * replace some deps in arrays, `require`s etc
-#     * remove some code and a dependency from a specific file.
 
 
+devDependencies: { grunt: '0.4.1', urequire: '>=0.6.10' }
+
+The `'urequire:XXX'` tasks in summary do some or all of those
+ * derive (inherit) from 'someTask' (and/or '_defaults')
+ * have a `path` as a source
+ * filter `filez` within the `path`
+ * save everything at `dstPath`
+ * converts all modules to UMD/AMD or `#{@projectName}-min.js`
+ * copies all other (non-module) files at `dstPath`
+ * export a global `window._B` with a `noConflict()`
+ * uglifies combined file with some `uglify2` settings
+ * injects deps in modules
+ * injects strings inside code bodies
+ * add banners etc
+ * manipulate modules:
+   * remove some matched code 'skeletons'
+   * replace some deps in arrays, `require`s etc
+   * remove some code and a dependency from a specific file.
 
 # License
 The MIT License
