@@ -1,23 +1,3 @@
-# feature 1 stuff
-# devDependencies: { grunt: '0.4.1', urequire: '>=0.6.8' }
-
-# The `'urequire:XXX'` tasks in summary do some or all of those
-#  * derive (inherit) from 'someTask' (and/or '_defaults')
-#  * have a `path` as a source
-#  * filter `filez` within the `path`
-#  * save everything at `dstPath`
-#  * converts all modules to UMD/AMD or `#{@projectName}-min.js`
-#  * copies all other (non-module) files at `dstPath`
-#  * export a global `window._B` with a `noConflict()`
-#  * uglifies combined file with some `uglify2` settings
-#  * injects deps in modules
-#  * injects strings inside code bodies
-#  * add banners etc
-#  * manipulate modules:
-#     * remove some matched code 'skeletons'
-#     * replace some deps in arrays, `require`s etc
-#     * remove some code and a dependency from a specific file.
-
 _ = require 'lodash'
 _B = require 'uberscore'
 

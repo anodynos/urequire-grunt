@@ -1,7 +1,7 @@
 {
   "name": "urequire-grunt",
   "description": "Bootstrap a uRequire Javascript project, posing a complete module system, multiple builds with a 10-line config",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "homepage": "https://github.com/anodynos/urequire-grunt",
   "author": {
     "name": "Agelos Pikoulas",
