@@ -12,9 +12,9 @@ With a minimum 5-10 line configuration, you can have an out-of-the-box, ready-to
 
 * minifies, root exports & performs dependency injections
 
-* 90% of a grunt's *usual suspects* functionality like watching, cleaning, inject:VERSION banners, copying etc are here (through uRequire or grunt plugins).
+* 90% of a grunt's *usual suspects* functionality like watching, cleaning, inject:VERSION, banners, copying etc are here (through uRequire or grunt plugins).
 
-* Creation of specs headers & specRunners (HTML included) based on mocha & chai
+* Creation of specs headers & specRunners (HTML included) based on mocha & chai and phantomjs
 
 * Reads you package.json & bower.json and it creates all RequireJS boilerplate (paths, shims etc), among others.
 
@@ -37,7 +37,6 @@ $ grunt watch:dev_test_node         # watches & runs the nodejs tests
 
 ```
 
-
 devDependencies: { grunt: '0.4.1', urequire: '>=0.6.10' }
 
 The `'urequire:XXX'` tasks in summary do some or all of those
@@ -57,7 +56,26 @@ The `'urequire:XXX'` tasks in summary do some or all of those
    * replace some deps in arrays, `require`s etc
    * remove some code and a dependency from a specific file.
 
+# What you'll need
+
+All you need is love and
+
+```coffee
+{
+    projectName   : "myAwesomeLib"        # @default: package.json#name
+    identifiers   : "myAwesomeLibID"      # eg, '$' or ['$', 'jQuery'] - acts as `export: root`, `export: bundle` etc
+    sourceDir     : "source/code"
+    buildDir      : "build"
+    sourceSpecDir : "source/spec"
+    buildSpecDir  : "build/spec"
+}
+
+```
+
+Why would you settle for more than `this` ?
+
 # License
+
 The MIT License
 
 Copyright (c) 2012 Agelos Pikoulas (agelos.pikoulas@gmail.com)
