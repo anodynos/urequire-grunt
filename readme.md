@@ -12,11 +12,11 @@ With a minimum 5-10 line configuration, you can have an out-of-the-box, ready-to
 
 * minifies, root exports & performs dependency injections
 
-* 90% of a grunt's *usual suspects* functionality like watching, cleaning, inject:VERSION banners, copying etc are here (through uRequire).
+* 90% of a grunt's *usual suspects* functionality like watching, cleaning, inject:VERSION banners, copying etc are here (through uRequire or grunt plugins).
 
 * Creation of specs headers & specRunners (HTML included) based on mocha & chai
 
-* Reads you package.json & bower.json and creates all RequireJS boilerplate (paths, shims etc)
+* Reads you package.json & bower.json and it creates all RequireJS boilerplate (paths, shims etc), among others.
 
 * You can always customize / subclass (i.e derive) any task(s)
 
