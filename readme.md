@@ -4,7 +4,7 @@ The early beginings of a uRequire-based, reusable & configurable template build 
 
 ## NOT IMPLEMENTED - version 0.0.0 (just the idea)
 
-It generalizes what urequire does to [uBerscore](https://github.com/anodynos/uBerscore/blob/master/Gruntfile.coffee) or [backbone-orm](https://github.com/vidigami/backbone-orm/pull/8#issuecomment-31297449), as a generic-pick-and-override-what-you-like-ready-for-multiple-builds-config-with-standard-commands.
+It generalizes what [urequire](http://urequire.org) does to [uBerscore](https://github.com/anodynos/uBerscore/blob/master/Gruntfile.coffee) or [backbone-orm](https://github.com/vidigami/backbone-orm/pull/8#issuecomment-31297449), as a generic-pick-and-override-what-you-like-ready-for-multiple-builds-config-with-standard-commands.
 
 With a minimum 5-10 line configuration, you can have an out-of-the-box, ready-to-work grunt & urequire based build system that:
 
@@ -22,18 +22,20 @@ With a minimum 5-10 line configuration, you can have an out-of-the-box, ready-to
 
 @examples TERRIBLY UNSTABLE, but the idea is here :-)
 
-grunt AMD test_AMD min test_min   # does the obvious
+```
+$ grunt AMD test_AMD min test_min   # does the obvious
 
-grunt watch:dev                   # watches the 'dev' build
+$ grunt watch:dev                   # watches the 'dev' build
 
-grunt watch:dev_test
+$ grunt watch:dev_test
   or
-grunt watch:test_dev              # watches & runs ALL tests after each successfull rebuild.
+$ grunt watch:test_dev              # watches & runs ALL tests after each successfull rebuild.
 
-grunt watch:dev_test_phantom      # watches & runs the mocha (phantomjs) tests
+$ grunt watch:dev_test_phantom      # watches & runs the mocha (phantomjs) tests
 
-grunt watch:dev_test_node         # watches & runs the nodejs tests
+$ grunt watch:dev_test_node         # watches & runs the nodejs tests
 
+```
 ###
 
 # devDependencies: { grunt: '0.4.1', urequire: '>=0.6.10' }
